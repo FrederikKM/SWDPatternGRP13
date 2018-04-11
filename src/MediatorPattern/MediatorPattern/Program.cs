@@ -11,10 +11,22 @@ namespace MediatorPattern
         static void Main(string[] args)
         {
             var chatroom = new ConcreteChatRoom();
-
+            var chatroom2 = new ConcreteChatRoom();
             var colleague1 = new ConcreteColleague1();
             var colleague2 = new ConcreteColleague2();
 
+            chatroom.Name = "GrindR";
+            chatroom2.Name = "Tinder";
+            colleague1.Name = "AlexD";
+            colleague2.Name = "Freedick";
+
+            colleague1.Join(chatroom);
+            colleague2.Join(chatroom);
+            colleague1.Join(chatroom2);
+
+            colleague1.Send(chatroom);
+            colleague2.Send(chatroom);
+            colleague1.Send(chatroom2);
         }
     }
 }

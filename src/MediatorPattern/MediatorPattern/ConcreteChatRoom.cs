@@ -9,15 +9,19 @@ namespace MediatorPattern
     public class ConcreteChatRoom : IChatRoom
     {
         public List<IColleague> ColleagueList { get; } = new List<IColleague>();
+        
+        public string Name { get;set;}
 
-        public ConcreteChatRoom()
-        {
-
-        }
         public void SendMessage(string message, IColleague colleague)
         {
-            
-            Console.WriteLine(colleague.Name + "Has sent: " + message);
+            foreach(var x in ColleagueList)
+            {
+                if (x != colleague)
+                {
+                    Console.WriteLine("\n" + colleague.Name + " has sent: " + message + " to " + x.Name + "\n");
+                    x.Receive(this, message);
+                }
+            }
         }
          
     }

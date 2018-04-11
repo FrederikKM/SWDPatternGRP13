@@ -8,10 +8,12 @@ namespace MediatorPattern
 {
     class ConcreteColleague1 : IColleague
     {
+        public string Name { get; set; }
+
         public void Join(IChatRoom chatroom)
         {
             chatroom.ColleagueList.Add(this);
-            Console.WriteLine("Added Colleage: " + Name);
+            Console.WriteLine("Added Colleague: " + Name + " to " + chatroom.Name + "\n");
         }
 
         public void Send(IChatRoom chatroom)
@@ -19,11 +21,9 @@ namespace MediatorPattern
             chatroom.SendMessage(Console.ReadLine(), this);
         }
 
-        public void Receive()
+        public void Receive(IChatRoom chatroom, string message)
         {
-            Console.WriteLine("Receive from Colleague 1");
+            Console.WriteLine(Name + " received message " + "\"" + message + "\"" + " from " + chatroom.Name + "\n");
         }
-
-        public string Name { get; set; }
     }
 }

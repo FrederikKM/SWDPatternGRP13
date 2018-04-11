@@ -8,10 +8,10 @@ namespace MediatorPattern
 {
     public interface IColleague
     {
-        void Join(IChatRoom c);
-        void Send();
-        void Receive();
-
         string Name { get; set; }
+
+        void Join(IChatRoom chatroom);
+        void Send(IChatRoom chatroom);
+        void Receive(IChatRoom chatroom, string message);
     }
 }

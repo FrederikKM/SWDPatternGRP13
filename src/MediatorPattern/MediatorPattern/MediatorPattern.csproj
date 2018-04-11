@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConcreteChatRoom.cs" />
+    <Compile Include="ConcreteColleague1.cs" />
+    <Compile Include="ConcreteColleague2.cs" />
+    <Compile Include="IChatRoom.cs" />
+    <Compile Include="IColleague.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
