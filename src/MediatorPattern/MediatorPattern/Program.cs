@@ -10,6 +10,11 @@ namespace MediatorPattern
     {
         static void Main(string[] args)
         {
+            var chatroom = new ConcreteChatRoom();
+
+            var colleague1 = new ConcreteColleague1();
+            var colleague2 = new ConcreteColleague2();
+
         }
     }
 }
