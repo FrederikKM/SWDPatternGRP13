@@ -15,10 +15,10 @@ namespace MediatorPattern
             var colleague1 = new ConcreteColleague1();
             var colleague2 = new ConcreteColleague2();
 
-            chatroom.Name = "GrindR";
-            chatroom2.Name = "Tinder";
+            chatroom.Name = "Chatroom1";
+            chatroom2.Name = "Chatroom2";
             colleague1.Name = "AlexD";
-            colleague2.Name = "Freedick";
+            colleague2.Name = "Frederik";
 
             colleague1.Join(chatroom);
             colleague2.Join(chatroom);
